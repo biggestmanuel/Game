@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Void Runner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SCREENS -->
+  <div class="screen" id="start-screen">
+    <div class="screen-inner">
+      <p class="game-label">ENDLESS RUNNER</p>
+      <h1 class="game-title">VOID<span>RUNNER</span></h1>
+      <p class="game-sub">Dodge the blocks. Survive the void.</p>
+      <button class="game-btn" id="start-btn">START GAME</button>
+      <p class="hint">Press <kbd>Space</kbd> or tap to jump</p>
+    </div>
+  </div>
+
+  <div class="screen hidden" id="gameover-screen">
+    <div class="screen-inner">
+      <p class="game-label">GAME OVER</p>
+      <h1 class="game-title">YOU <span>DIED</span></h1>
+      <p class="game-sub">Score: <span id="final-score">0</span></p>
+      <p class="game-sub" style="font-size:14px;">Best: <span id="best-score">0</span></p>
+      <button class="game-btn" id="restart-btn">TRY AGAIN</button>
+    </div>
+  </div>
+
+  <!-- GAME CANVAS -->
+  <div class="game-wrapper hidden" id="game-wrapper">
+    <div class="hud">
+      <span>SCORE: <strong id="score-display">0</strong></span>
+      <span>BEST: <strong id="best-display">0</strong></span>
+      <span id="speed-display">SPEED: 1x</span>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <p class="mobile-hint">Tap screen to jump</p>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
